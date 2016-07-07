@@ -1,5 +1,4 @@
-from flask import Flask, send_from_directory
-from flask import render_template
+from flask import Flask, send_from_directory, render_template
 import requests
 import xml.etree.ElementTree as ET
 import json
