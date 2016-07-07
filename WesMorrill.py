@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello():
     url = "http://gateway-a.watsonplatform.net/calls/url/URLGetEmotion"
 
-    querystring = {"api_key":"4d1bc45dacc0540817699070700a9c626cdec654","url":"http://www.imdb.com/title/tt0910970/?ref_=nv_sr_1"}
+    querystring = {"api_key":"<api_key>","url":"http://www.imdb.com/title/tt0910970/?ref_=nv_sr_1"}
 
     payload = ""
     headers = {
