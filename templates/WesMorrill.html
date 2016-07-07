@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+    <script src="js/d3pie.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <title>Are You a Full-Stack Developer?</title>
+  </head>
+  <body>
+    <div id="pieChart"></div>
+    <p id='emotions' visibility='hidden'>{{docEmotions}}</p>
+    <script>
+      var data = {};
+      data['data'] = {
+        'content' : []
+      };
+      docEmotions = $('#emotions').text();
+      var emotions = JSON.parse(docEmotions);
+      for (var emotion in emotions) {
+        var item = {};
+        item['label'] = emotion;
+        item['value'] = parseFloat(emotions[emotion]);
+        data['data']['content'].push(item);
+      }
+      var pie = new d3pie("pieChart", data);
+    </script>
+  </body>
+</html>
