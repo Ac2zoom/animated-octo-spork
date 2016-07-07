@@ -47,7 +47,6 @@ jupyter==1.0.0
 jupyter-client==4.2.2
 jupyter-console==4.1.1
 jupyter-core==4.1.0
-llvmlite==0.9.0
 locket==0.2.0
 lxml==3.6.0
 MarkupSafe==0.23
